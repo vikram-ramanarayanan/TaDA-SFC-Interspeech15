@@ -1,0 +1,75 @@
+\documentclass[a4paper]{article}
+
+\usepackage{INTERSPEECH2015}
+
+\usepackage{graphicx}
+\usepackage{amssymb,amsmath,bm}
+\usepackage{textcomp}
+
+\def\vec#1{\ensuremath{\bm{{#1}}}}
+\def\mat#1{\vec{#1}}
+
+
+\sloppy % better line breaks
+\ninept
+
+\title{A task dynamics model of speech articulation with state feedback control}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% If multiple authors, uncomment and edit the lines shown below.       %%
+%% Note that each line must be emphasized {\em } by itself.             %%
+%% (by Stephen Martucci, author of spconf.sty).                         %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\makeatletter
+%\def\name#1{\gdef\@name{#1\\}}
+%\makeatother
+%\name{{\em Firstname1 Lastname1, Firstname2 Lastname2, Firstname3 Lastname3,}\\
+%      {\em Firstname4 Lastname4, Firstname5 Lastname5, Firstname6 Lastname6,
+%      Firstname7 Lastname7}}
+%%%%%%%%%%%%%%% End of required multiple authors changes %%%%%%%%%%%%%%%%%
+
+\makeatletter
+\def\name#1{\gdef\@name{#1\\}}
+\makeatother \name{{\em Vikram Ramanarayanan$^{1,\dagger}$, Ben Parrell$^{2,\dagger}$, John Houde$^3$, Srikantan Nagarajan$^4$ and Louis Goldstein$^5$ }}
+
+\address{$^1$Educational Testing Service R\&D \\
+  $^2$Department of Psychology, UC Berkeley\\
+  $^3$Department of Otolaryngology, UCSF \\
+  $^4$Department of Radiology, UCSF \\
+  $^5$Department of Linguistics, USC \\
+  {\small \tt vramanarayanan@ets.org,parrell@gmail.com}
+}
+
+%\twoauthors{Karen Sp\"{a}rck Jones.}{Department of Speech and Hearing \\
+%  Brittania University, Ambridge, Voiceland \\
+%  {\small \tt Karen@sh.brittania.edu} }
+%  {Rose Tyler}{Department of Linguistics \\
+%  University of Speechcity, Speechland \\
+%  {\small \tt RTyler@ling.speech.edu} }
+
+%
+\begin{document}
+
+  \maketitle
+  %
+  \begin{abstract}
+
+  We present a task dynamics model of speech articulation that explicitly incorporates a framework for control based on instantaneous and delayed auditory state feedback. We do this by combining two existing well-known theories in the speech production literature -- the Task Dynamics model of speech production \cite{SALTZMAN89} and the State Feedback Control model of speech motor control \cite{HOUDE12}. We demonstrate the effectiveness of the model by simulating a simple perturbation study. 
+  \let\thefootnote\relax\footnotetext{$^\dagger$The first two authors contributed equally to the work.} 
+  \end{abstract}
+  \noindent{\bf Index Terms}: task dynamics, articulatory phonology, state feedback control
+
+
+  \section{Introduction}
+
+
+  \section{Acknowledgements}
+  
+
+
+  \newpage
+  \eightpt
+  \bibliographystyle{IEEEtran}
+  \bibliography{TaDA_SFC_IS15}
+
+\end{document}
