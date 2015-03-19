@@ -13,7 +13,8 @@
 \sloppy % better line breaks
 \ninept
 
-\title{A task dynamics model of speech articulation with state feedback control}
+\title{A new model of speech motor control based on task dynamics and state feedback}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% If multiple authors, uncomment and edit the lines shown below.       %%
@@ -30,14 +31,16 @@
 
 \makeatletter
 \def\name#1{\gdef\@name{#1\\}}
-\makeatother \name{{\em Vikram Ramanarayanan$^{1,\dagger}$, Ben Parrell$^{2,\dagger}$, John Houde$^3$, Srikantan Nagarajan$^4$ and Louis Goldstein$^5$ }}
+\makeatother \name{{\em Benjamin Parrell$^{1,\dagger}$, Vikram Ramanarayanan$^{2,\dagger}$, Louis Goldstein$^3$,}\\
+{\em Shrikanth Narayanan$^4$, Srikantan Nagarajan$^4$, and John Houde$^5$}}
 
-\address{$^1$Educational Testing Service R\&D \\
-  $^2$Department of Psychology, UC Berkeley\\
-  $^3$Department of Otolaryngology, UCSF \\
-  $^4$Department of Radiology, UCSF \\
-  $^5$Department of Linguistics, USC \\
-  {\small \tt vramanarayanan@ets.org,parrell@gmail.com}
+\address{$^1$Department of Psychology, UC Berkeley\\
+  $^2$Educational Testing Service R\&D \\
+  $^3$Department of Linguistics, USC \\
+  $^4$Department of Electrical Engineering, USC \\ 
+  $^5$Department of Radiology, UCSF \\
+  $^6$Department of Otolaryngology, UCSF \\
+  {\small \tt ben.parrell@berkeley.edu, vramanarayanan@ets.org}
 }
 
 %\twoauthors{Karen Sp\"{a}rck Jones.}{Department of Speech and Hearing \\
@@ -54,15 +57,21 @@
   %
   \begin{abstract}
 
-  We present a task dynamics model of speech articulation that explicitly incorporates a framework for control based on instantaneous and delayed auditory state feedback. We do this by combining two existing well-known theories in the speech production literature -- the Task Dynamics model of speech production \cite{SALTZMAN89} and the State Feedback Control model of speech motor control \cite{HOUDE12}. We demonstrate the effectiveness of the model by simulating a simple perturbation study. 
+ We present a model of speech motor control based on articulatory targets that explicitly incorporates acoustic sensory feedback using a framework for state-based control. We do this by combining two existing, complementary models of speech motor control -- the Task Dynamics model \cite{SALTZMAN89} and the State Feedback Control model  \cite{HOUDE12}. We demonstrate the effectiveness of the combined model by simulating a simple formant perturbation study, and show that the model qualitatively reproduces the behavior reported in human subjects, producing online compensation for unexpected perturbations of F1.
+ 
   \let\thefootnote\relax\footnotetext{$^\dagger$The first two authors contributed equally to the work.} 
   \end{abstract}
-  \noindent{\bf Index Terms}: task dynamics, articulatory phonology, state feedback control
+  \noindent{\bf Index Terms}: speech motor control, auditory feedback, task dynamics, state feedback control, feedback perturbation
 
 
   \section{Introduction}
-
-
+ 
+  \section{Response of model to altered feedback}
+  One of the strongest pieces of evidence that the speech-production system uses acoustic feedback to control ongoing speech comes from studies which perturb the spectral components of speech in real time \cite{PURCEL2006, TOURVILLE2008, NIZIOLEK2013}. In these studies, subjects repeatedly produce either a single word with an extended vowel or a sustained vowel while listening to feedback of their own voice played back in real time via headphones. On a random subset of trials, their speech is perturbed (either F1 alone or F1 and F2). Subjects compensate somewhat, though not completely, for this unexpected perturbation by shifting their own formants in the opposite direction (e.g. a positive shift in F1 played back to the subjects induces a negative F1 shift in the subjects production). These compensations generally being roughly 200 ms after the onset of the perturbation or, for experiments with continuous perturbation throughout the production of a word, the vowel onset.  
+  
+  These results are generally taken as evidence that vowels have an explicit acoustic target \cite{PERRIER2015}. We hypothesized that this compensatory behavior could, alternatively, be produced by a system with articulatory, rather than explicitly acoustic, goals. Although the targets in such a system might be in articulatory space, the actual articulatory state of the system cannot be directly known; rather, the current state must be estimated from 1) the expected outcome of produced motor command and 2) sensory feedback. In such a system, a given motor command issued to achieve a particular articulatory task would generate an \textbf{expected sensory expectation}, which could then be compared with incoming sensory feedback. Any discrepancy between the expected and actual sensory feedback would generate a sensory error, which could be used to correct the estimate of the current articulator state. 
+  
+  
   \section{Acknowledgements}
   
 
